@@ -29,10 +29,6 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login'])
   }
 
-  list() {
-    this.router.navigate(['/list'])
-  }
-
   updateUser() {
     this.updateForm.value.name === "" ? this.updateForm.value.name = undefined : ""  
     this.updateForm.value.password === "" ? this.updateForm.value.password = undefined : ""  

@@ -1,1 +1,41 @@
-<p>list works!</p>
+<h1> list page</h1>
+<button (click)="logout()">Log out</button>
+<br />
+<br />
+
+<button routerLink="/">Home Page</button>
+
+<br />
+<br />
+
+<h3>tasks</h3>
+<table>
+    <tr *ngFor="let task of tasks">
+        <td>{{task.title}}</td>
+        <td>{{task.status}}</td>
+        <td>{{task.date}}</td>
+        <td><button routerLink="/list/edit/{{task._id}}">Edit</button></td>
+        <td><button (click)="delete(task._id)">Delete</button></td>
+
+    </tr>
+</table>
+
+<h3>Add Task</h3>
+<form [formGroup]="newTask" (ngSubmit)="create()">
+    <label>
+        Title:
+        <input type="text" formControlName="title">
+    </label>
+
+    <label>
+        Status:
+        <input type="text" formControlName="status">
+    </label>
+
+    <label>
+        date:
+        <input type="date" formControlName="date">
+    </label>
+
+    <button type="submit">Submit</button>
+</form>

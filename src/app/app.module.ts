@@ -11,6 +11,7 @@ import { PageComponent } from './page/page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
+import { ListeditComponent } from './listedit/listedit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListComponent } from './list/list.component';
     FooterComponent,
     PageComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    ListeditComponent
   ],
   imports: [
     BrowserModule,

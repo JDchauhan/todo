@@ -1,0 +1,34 @@
+<button (click)="logout()">Log out</button>
+<br />
+<br />
+
+<button routerLink="/list">list Page</button>
+
+<br />
+<br />
+
+<h1>Edit task</h1>
+<div *ngIf="tasks">
+    <form [formGroup]="updatedTask" (ngSubmit)="updateTask()">
+        <label>
+            Title:
+            <input type="text" formControlName="title">
+        </label>
+
+        <label>
+            Status:
+            <input type="text" formControlName="status">
+        </label>
+
+        <label>
+            date:
+            <input type="date" formControlName="date">
+        </label>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div *ngIf="!tasks">
+    No Data
+</div>
