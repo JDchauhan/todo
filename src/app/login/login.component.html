@@ -1,0 +1,38 @@
+<h1></h1>
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Email:
+    <input type="text" formControlName="email">
+  </label>
+
+  <label>
+    Password:
+    <input type="password" formControlName="password">
+  </label>
+
+  <button type="submit">Submit</button>
+</form>
+
+<br />
+<br />
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+
+
+  <label>
+    Email:
+    <input type="text" formControlName="email">
+  </label>
+
+  <label>
+    Password:
+    <input type="password" formControlName="password">
+  </label>
+
+  <button type="submit">Submit</button>
+</form>

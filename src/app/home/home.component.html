@@ -1,0 +1,22 @@
+<button (click)="logout()">Log out</button>
+<br/>
+<br/>
+
+<button  routerLink="/list">List Page</button>
+
+<br/>
+<br/>
+
+<form [formGroup]="updateForm" (ngSubmit)="updateUser()">
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+
+    <label>
+        Password:
+        <input type="password" formControlName="password">
+    </label>
+
+    <button type="submit">Submit</button>
+</form>
