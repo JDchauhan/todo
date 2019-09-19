@@ -29,7 +29,11 @@
 
     <label>
         Status:
-        <input type="text" formControlName="status">
+        <select formControlName="status">
+            <option value="todo">TO DO</option>
+            <option value="inprogress">In Progress</option>
+            <option value="done">Done</option>
+        </select>
     </label>
 
     <label>
